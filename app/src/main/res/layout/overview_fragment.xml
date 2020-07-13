@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.varoa.gituser.ui.detail.overview.OverviewViewModel" />
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/overviewSrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/overviewContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/smaller_margin">
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    loadImage="@{viewModel.userData.avatar}"
+                    android:layout_width="@dimen/larger_vector"
+                    android:layout_height="@dimen/larger_vector"
+                    android:contentDescription="@string/user_avatar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_social" />
+
+                <TextView
+                    android:id="@+id/username"
+                    style="@style/TextGitUser.Title"
+                    android:layout_marginTop="@dimen/smaller_margin"
+                    android:gravity="center"
+                    android:text="@{viewModel.userData.username}"
+                    android:textColor="@color/colorText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/avatar"
+                    tools:text="varoa" />
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/TextGitUser"
+                    android:layout_marginTop="@dimen/smallest_margin"
+                    android:gravity="center"
+                    android:text="@{viewModel.userData.name}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/username"
+                    tools:text="Alvaro Dwi" />
+
+                <View
+                    android:id="@+id/divider"
+                    style="@style/Divider"
+                    android:background="@color/colorDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/name" />
+
+                <TextView
+                    android:id="@+id/bio"
+                    style="@style/TextGitUser"
+                    app:toggleIcon="@{viewModel.userData.bio}"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:gravity="center"
+                    android:text="@{viewModel.userData.bio}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider"
+                    tools:text="Lorem ipsum" />
+
+                <ImageView
+                    android:id="@+id/ic_location"
+                    style="@style/VectorIcon.Small"
+                    app:toggleIcon="@{viewModel.userData.location}"
+                    android:contentDescription="@string/icon_location"
+                    android:src="@drawable/ic_location"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bio" />
+
+                <TextView
+                    android:id="@+id/location"
+                    style="@style/TextGitUser"
+                    app:toggleIcon="@{viewModel.userData.location}"
+                    android:layout_marginStart="@dimen/smaller_margin"
+                    android:text="@{viewModel.userData.location}"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_location"
+                    app:layout_constraintStart_toEndOf="@id/ic_location"
+                    app:layout_constraintTop_toTopOf="@id/ic_location"
+                    tools:text="Bandung, Jawa Barat" />
+
+                <ImageView
+                    android:id="@+id/ic_company"
+                    style="@style/VectorIcon.Small"
+                    app:toggleIcon="@{viewModel.userData.company}"
+                    android:contentDescription="@string/icon_company"
+                    android:src="@drawable/ic_work"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_location" />
+
+                <TextView
+                    android:id="@+id/company"
+                    style="@style/TextGitUser"
+                    app:toggleIcon="@{viewModel.userData.company}"
+                    android:layout_marginStart="@dimen/smaller_margin"
+                    android:text="@{viewModel.userData.company}"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_company"
+                    app:layout_constraintStart_toEndOf="@id/ic_company"
+                    app:layout_constraintTop_toTopOf="@id/ic_company"
+                    tools:text="SMKN 4 Bandung" />
+
+                <ImageView
+                    android:id="@+id/ic_email"
+                    style="@style/VectorIcon.Small"
+                    app:toggleIcon="@{viewModel.userData.email}"
+                    android:contentDescription="@string/icon_email"
+                    android:src="@drawable/ic_email"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_company" />
+
+                <TextView
+                    android:id="@+id/email"
+                    style="@style/TextGitUser"
+                    app:toggleIcon="@{viewModel.userData.email}"
+                    android:layout_marginStart="@dimen/smaller_margin"
+                    android:text="@{viewModel.userData.email}"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_email"
+                    app:layout_constraintStart_toEndOf="@id/ic_email"
+                    app:layout_constraintTop_toTopOf="@id/ic_email"
+                    tools:text="varoalvaro493@gmail.com" />
+
+                <ImageView
+                    android:id="@+id/ic_time"
+                    style="@style/VectorIcon.Small"
+                    android:contentDescription="@string/icon_time"
+                    android:src="@drawable/ic_time"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_email" />
+
+                <TextView
+                    android:id="@+id/time"
+                    style="@style/TextGitUser"
+                    app:toggleIcon="@{viewModel.userData.joined}"
+                    android:layout_marginStart="@dimen/smaller_margin"
+                    android:text="@{viewModel.joinedDate}"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_time"
+                    app:layout_constraintStart_toEndOf="@id/ic_time"
+                    app:layout_constraintTop_toTopOf="@id/ic_time"
+                    tools:text="18 Juni 2018" />
+
+                <View
+                    android:id="@+id/divider2"
+                    style="@style/Divider"
+                    android:background="@color/colorDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_time" />
+
+                <ImageView
+                    android:id="@+id/ic_repo"
+                    style="@style/VectorIcon"
+                    android:contentDescription="@string/icon_repo"
+                    android:src="@drawable/ic_laptop"
+                    app:layout_constraintEnd_toStartOf="@id/divider3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+                <TextView
+                    android:id="@+id/repoCount"
+                    style="@style/TextGitUser.Title"
+                    app:layout_constraintEnd_toEndOf="@id/ic_repo"
+                    app:layout_constraintStart_toStartOf="@id/ic_repo"
+                    app:layout_constraintTop_toBottomOf="@id/ic_repo"
+                    app:printNumber="@{viewModel.userData.repository}"
+                    tools:text="14" />
+
+                <TextView
+                    android:id="@+id/repoPlaceholder"
+                    style="@style/TextGitUser.Placeholder"
+                    android:text="@string/text_repository"
+                    app:layout_constraintEnd_toEndOf="@id/ic_repo"
+                    app:layout_constraintStart_toStartOf="@id/ic_repo"
+                    app:layout_constraintTop_toBottomOf="@id/repoCount" />
+
+                <View
+                    android:id="@+id/divider3"
+                    style="@style/VerticalDivider"
+                    android:background="@color/colorDivider"
+                    app:layout_constraintBottom_toBottomOf="@id/repoPlaceholder"
+                    app:layout_constraintEnd_toStartOf="@id/ic_social"
+                    app:layout_constraintStart_toEndOf="@id/ic_repo"
+                    app:layout_constraintTop_toTopOf="@id/ic_repo" />
+
+                <ImageView
+                    android:id="@+id/ic_social"
+                    style="@style/VectorIcon"
+                    android:contentDescription="@string/icon_social"
+                    android:src="@drawable/ic_social"
+                    app:layout_constraintEnd_toStartOf="@id/divider4"
+                    app:layout_constraintStart_toEndOf="@id/divider3"
+                    app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+                <TextView
+                    android:id="@+id/followerCount"
+                    style="@style/TextGitUser.Title"
+                    app:layout_constraintEnd_toEndOf="@id/ic_social"
+                    app:layout_constraintStart_toStartOf="@id/ic_social"
+                    app:layout_constraintTop_toBottomOf="@id/ic_social"
+                    app:printNumber="@{viewModel.userData.followers}"
+                    tools:text="14" />
+
+                <TextView
+                    android:id="@+id/followerPlaceholder"
+                    style="@style/TextGitUser.Placeholder"
+                    android:text="@string/text_follower"
+                    app:layout_constraintEnd_toEndOf="@id/ic_social"
+                    app:layout_constraintStart_toStartOf="@id/ic_social"
+                    app:layout_constraintTop_toBottomOf="@id/repoCount" />
+
+                <View
+                    android:id="@+id/divider4"
+                    style="@style/VerticalDivider"
+                    android:background="@color/colorDivider"
+                    app:layout_constraintBottom_toBottomOf="@id/followerPlaceholder"
+                    app:layout_constraintEnd_toStartOf="@id/ic_social2"
+                    app:layout_constraintStart_toEndOf="@id/ic_social"
+                    app:layout_constraintTop_toTopOf="@id/ic_social" />
+
+                <ImageView
+                    android:id="@+id/ic_social2"
+                    style="@style/VectorIcon"
+                    android:contentDescription="@string/icon_social"
+                    android:src="@drawable/ic_social2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/divider4"
+                    app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+                <TextView
+                    android:id="@+id/followingCount"
+                    style="@style/TextGitUser.Title"
+                    app:layout_constraintEnd_toEndOf="@id/ic_social2"
+                    app:layout_constraintStart_toStartOf="@id/ic_social2"
+                    app:layout_constraintTop_toBottomOf="@id/ic_social2"
+                    app:printNumber="@{viewModel.userData.following}"
+                    tools:text="14" />
+
+                <TextView
+                    android:id="@+id/followingPlaceholder"
+                    style="@style/TextGitUser.Placeholder"
+                    android:text="@string/text_following"
+                    app:layout_constraintEnd_toEndOf="@id/ic_social2"
+                    app:layout_constraintStart_toStartOf="@id/ic_social2"
+                    app:layout_constraintTop_toBottomOf="@id/repoCount" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_avatar">User Avatar</string>
+
+    <string name="img_placeholder">Gambar Placeholder</string>
+    <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
+    <string name="favorite_user">Pengguna Favorit</string>
+    <string name="detail_info">Untuk melihat detail user yang lengkap,\ngunakan aplikasi utama</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name" translatable="false">GituserFav</string>
+
+    <!--    content description-->
+    <string name="user_avatar">User Avatar</string>
+
+
+    <string name="img_placeholder">Image Placeholder</string>
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="favorite_user">Favorite User</string>
+    <string name="detail_info">To see \'complete\' user detail,\nplease use the main app</string>
+</resources>

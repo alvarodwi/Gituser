@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="smaller_margin">8dp</dimen>
+    <dimen name="smallest_margin">4dp</dimen>
+
+    <dimen name="small_vector">32dp</dimen>
+    <dimen name="medium_vector">48dp</dimen>
+    <dimen name="larger_vector">160dp</dimen>
+    <dimen name="mini_margin">4dp</dimen>
+</resources>

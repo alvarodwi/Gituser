@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name" translatable="false">GitUser</string>
+
+    <!--    content description-->
+    <string name="user_avatar">User Avatar</string>
+    <string name="icon_location">Icon Location</string>
+    <string name="icon_company">Icon Company</string>
+    <string name="icon_repo">Icon Repo</string>
+    <string name="icon_social">Icon Social</string>
+    <string name="icon_time">Icon Time</string>
+
+
+    <string name="text_repository">Repository</string>
+    <string name="text_follower">Followers</string>
+    <string name="text_following">Following</string>
+    <string name="text_overview">Overview</string>
+    <string name="img_placeholder">Image Placeholder</string>
+    <string name="search_term">Search Term</string>
+    <string name="search_field_helper">Search by username</string>
+    <string name="icon_email">Icon Email</string>
+    <string name="no_result">No Result</string>
+    <string name="settings">Settings</string>
+    <string name="favorite">Favorite</string>
+    <string name="favorite_user">Favorite User</string>
+    <string name="toFavorites">Added to favorites</string>
+    <string name="fromFavorites">Removed from favorites</string>
+    <string name="reminder_key" translatable="false">reminder</string>
+    <string name="reminder_time_key" translatable="false">reminderTime</string>
+    <string name="locale_key" translatable="false">locale</string>
+    <string name="reminder_title">Enable daily reminder</string>
+    <string name="reminder_summary">Reminder to open this app</string>
+    <string name="reminder_time_title">Modify reminder</string>
+    <string name="reminder_time_summary">Reminder set on %s</string>
+    <string name="language">Language</string>
+    <string name="reminder">Reminder</string>
+    <string name="locale_title">Change language</string>
+    <string name="locale_summary">Launch locale settings of your device</string>
+    <string name="channel_name" translatable="false">GitUser-%s</string>
+    <string name="reminder_notif_message">Let\'s find popular user from GitHub!</string>
+    <string name="reminder_notif_title">GitUser - Daily Reminder</string>
+    <string name="reminder_notif_type" translatable="false">DailyReminder</string>
+    <string name="reminder_notif_desc">Channel notification for daily reminder</string>
+    <string name="empty_text">No Data</string>
+    <string name="icon_dialog">Icon Dialog</string>
+    <string name="success_subtitle">Now you have used this app %s feature!</string>
+    <string name="success_title">%s Feature</string>
+    <string name="widget" translatable="false">Widget</string>
+</resources>

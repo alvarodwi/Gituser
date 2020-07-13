@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_avatar">User Avatar</string>
+    <string name="icon_location">Logo Lokasi</string>
+    <string name="icon_company">Logo Perusahaan</string>
+    <string name="icon_repo">Logo Repo</string>
+    <string name="icon_social">Logo Sosial</string>
+    <string name="icon_time">Logo Waktu</string>
+
+    <string name="text_repository">Repository</string>
+    <string name="text_follower">Diikuti</string>
+    <string name="text_following">Mengikuti</string>
+    <string name="text_overview">Tinjauan</string>
+    <string name="img_placeholder">Gambar Placeholder</string>
+    <string name="search_term">Kriteria Pencarian</string>
+    <string name="search_field_helper">Cari user berdasarkan username</string>
+    <string name="icon_email">Logo Email</string>
+    <string name="no_result">Tidak Ditemukan</string>
+    <string name="settings">Pengaturan</string>
+    <string name="favorite">Favorit</string>
+    <string name="favorite_user">Pengguna Favorit</string>
+    <string name="toFavorites">Ditambahkan kedalam favorit</string>
+    <string name="fromFavorites">Dihapus dari favorit</string>
+    <string name="reminder_title">Nyalakan pengingat harian</string>
+    <string name="reminder_summary">Pengingat untuk membuka aplikasi</string>
+    <string name="reminder_time_title">Ubah pengingat</string>
+    <string name="reminder_time_summary">Pengingat di set pukul %s</string>
+    <string name="language">Bahasa</string>
+    <string name="reminder">Pengingat</string>
+    <string name="locale_title">Ubah bahasa</string>
+    <string name="locale_summary">Membuka pengaturan bahasa pada perangkat Anda</string>
+    <string name="reminder_notif_message">Ayo temukan pengguna yang populer dari GitHub!</string>
+    <string name="reminder_notif_title">GitUser - Pengingat Harian</string>
+    <string name="reminder_notif_desc">Channel notifikasi untuk pengingat harian</string>
+    <string name="empty_text">Data Kosong</string>
+    <string name="icon_dialog">Logo Dialog</string>
+    <string name="success_subtitle">Sekarang anda telah menggunakan fitur %s!</string>
+    <string name="success_title">Fitur %s</string>
+</resources>

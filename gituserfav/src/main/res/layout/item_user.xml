@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.varoa.gituserfav.data.model.User" />
+
+        <variable
+            name="clickListener"
+            type="com.varoa.gituserfav.ui.adapter.UserRvAdapter.UserRvListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="@{() -> clickListener.onClick(item)}"
+        android:padding="@dimen/standard_margin">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/medium_vector"
+            android:layout_height="@dimen/medium_vector"
+            android:contentDescription="@string/user_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:loadImage="@{item.avatar}"
+            />
+
+        <TextView
+            android:id="@+id/username"
+            style="@style/TextGitUser"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/muli"
+            android:text="@{item.username}"
+            app:layout_constraintBottom_toBottomOf="@id/avatar"
+            app:layout_constraintStart_toEndOf="@id/avatar"
+            app:layout_constraintTop_toTopOf="@id/avatar"
+            tools:text="varoa" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

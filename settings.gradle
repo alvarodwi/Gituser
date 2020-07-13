@@ -1,0 +1,3 @@
+include ':gituserfav'
+rootProject.name='Gituser'
+include ':app'

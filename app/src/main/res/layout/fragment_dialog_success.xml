@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:cardCornerRadius="@dimen/mini_margin"
+        app:cardElevation="0dp"
+        tools:context=".ui.common.dialog.one.DialogOneButtonFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="280dp"
+            android:padding="@dimen/standard_margin">
+
+            <ImageView
+                android:id="@+id/imageDialog"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:contentDescription="@string/icon_dialog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_fav" />
+
+            <TextView
+                android:id="@+id/textMessage"
+                style="@style/TextGitUser.Placeholder"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageDialog"
+                tools:text="Success Dialog Title" />
+
+            <TextView
+                android:id="@+id/textSubMessage"
+               style="@style/TextGitUser.Placeholder.Smaller"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textMessage"
+                tools:text="Success Dialog Subtitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

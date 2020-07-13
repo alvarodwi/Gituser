@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/favoriteFragment">
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.varoa.gituserfav.ui.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="user"
+            app:argType="com.varoa.gituserfav.data.model.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.varoa.gituserfav.ui.favorite.FavoriteFragment"
+        android:label="FavoriteFragment" >
+        <action
+            android:id="@+id/favoriteToDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+</navigation>

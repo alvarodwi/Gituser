@@ -1,0 +1,74 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontFamily">@font/muli</item>
+        <item name="homeAsUpIndicator">@drawable/ic_arrow_back</item>
+    </style>
+
+
+    <style name="AppTheme.Toolbar">
+        <item name="android:textColorPrimary">@color/colorText</item>
+        <item name="android:textColorSecondary">@color/colorIcons</item>
+        <item name="actionMenuTextColor">@color/colorIcons</item>
+        <item name="colorControlNormal">@color/colorIcons</item>
+        <!-- Used to tint the ActionMode background and preserve the underline. -->
+        <item name="android:colorBackground">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="TextGitUser" parent="@style/TextAppearance.AppCompat">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextGitUser.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextGitUser.Placeholder">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextGitUser.Placeholder.Smaller">
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextGitUser.AllCaps">
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_marginTop">@dimen/standard_margin</item>
+    </style>
+
+    <style name="VerticalDivider">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginStart">@dimen/smaller_margin</item>
+        <item name="android:layout_marginEnd">@dimen/smaller_margin</item>
+    </style>
+
+    <style name="VectorIcon">
+        <item name="android:layout_width">96dp</item>
+        <item name="android:layout_height">96dp</item>
+        <item name="android:layout_marginTop">@dimen/standard_margin</item>
+        <item name="tint">@color/colorPrimary</item>
+    </style>
+
+    <style name="VectorIcon.Small">
+        <item name="android:layout_width">@dimen/small_vector</item>
+        <item name="android:layout_height">@dimen/small_vector</item>
+        <item name="android:layout_marginTop">@dimen/smaller_margin</item>
+        <item name="tint">@color/colorPrimaryDark</item>
+    </style>
+</resources>

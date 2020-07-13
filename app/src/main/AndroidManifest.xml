@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.varoa.gituser">
+
+    <permission
+        android:name="com.varoa.gituser.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.varoa.gituser.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".GitUserApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver android:name=".utils.widget.FavoriteUsersWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favorite_users_widget_info" />
+        </receiver>
+
+        <service
+            android:name="com.varoa.gituser.utils.widget.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <provider
+            android:name=".data.provider.UserContentProvider"
+            android:authorities="com.varoa.gituser"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.varoa.gituser.READ_DATABASE"
+            android:writePermission="com.varoa.gituser.WRITE_DATABASE" />
+
+        <receiver
+            android:name=".utils.reminder.BootReceiver"
+            android:enabled="true" />
+        <receiver
+            android:name=".utils.reminder.ReminderReceiver"
+            android:enabled="true" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
